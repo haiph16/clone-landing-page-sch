@@ -1,0 +1,21 @@
+{
+  "name": "soonchunhyang-portal",
+  "version": "2.0.0",
+  "description": "Cổng thông tin tuyển sinh Đại học Soonchunhyang Việt Nam (WordPress + Tailwind CSS + GitHub Pages Export)",
+  "scripts": {
+    "start": "node preview_server.cjs",
+    "preview": "node preview_server.cjs",
+    "build:static": "node build_static.cjs",
+    "build:css": "npx tailwindcss -c ./wp-content/themes/soonchunhyang-tailwind/tailwind.config.js -i ./wp-content/themes/soonchunhyang-tailwind/assets/css/input.css -o ./wp-content/themes/soonchunhyang-tailwind/assets/css/tailwind.css --minify",
+    "watch:css": "npx tailwindcss -c ./wp-content/themes/soonchunhyang-tailwind/tailwind.config.js -i ./wp-content/themes/soonchunhyang-tailwind/assets/css/input.css -o ./wp-content/themes/soonchunhyang-tailwind/assets/css/tailwind.css --watch",
+    "wp:start": "php -S localhost:8000",
+    "wp:seed": "php seed_initial_data.php",
+    "deploy": "node build_static.cjs && gh-pages -d docs"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.19"
+  }
+}
