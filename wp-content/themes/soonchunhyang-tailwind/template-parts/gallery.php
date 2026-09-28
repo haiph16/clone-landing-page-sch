@@ -80,7 +80,7 @@ if (empty($gallery_items)) {
         ),
         array(
             'id'       => 6,
-            'title'    => 'Văn phòng tuyển sinh chính thức SCH tại Foresa Xuân Phương',
+            'title'    => 'Văn phòng đại diện tuyển sinh chính thức SCH tại Hà Nội',
             'category' => 'campus',
             'imageUrl' => $theme_uri . '/assets/images/news-office.jpg'
         ),

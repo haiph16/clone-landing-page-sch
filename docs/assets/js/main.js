@@ -436,7 +436,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 } catch (e) {
                     console.error('LocalStorage error:', e);
                 }
-                showAlert('Đăng ký tư vấn thành công! Cán bộ tuyển sinh SCH sẽ liên hệ với bạn trong thời gian sớm nhất (Hotline: 096 841 45 86).', 'success');
+                showAlert('Đăng ký tư vấn thành công! Cán bộ tuyển sinh SCH sẽ liên hệ với bạn trong thời gian sớm nhất (Hotline: 0327 366 093).', 'success');
                 consultationForm.reset();
             })
             .finally(function () {

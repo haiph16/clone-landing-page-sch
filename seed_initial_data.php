@@ -109,7 +109,7 @@ if (empty($existing_gallery)) {
         array('title' => 'Khuôn viên xanh rợp bóng cây tại thành phố Asan', 'cat' => 'campus', 'image' => 'assets/images/banner-3.webp'),
         array('title' => 'Ký túc xá tiện nghi sức chứa hơn 4.000 sinh viên', 'cat' => 'dormitory', 'image' => 'assets/images/admissions-side.jpg'),
         array('title' => 'Trung tâm Hỗ trợ Việc làm University Job Plus', 'cat' => 'activities', 'image' => 'assets/images/news-job-support.png'),
-        array('title' => 'Văn phòng tuyển sinh chính thức SCH tại Foresa Xuân Phương', 'cat' => 'campus', 'image' => 'assets/images/news-office.jpg'),
+        array('title' => 'Văn phòng đại diện tuyển sinh chính thức SCH tại Hà Nội', 'cat' => 'campus', 'image' => 'assets/images/news-office.jpg'),
         array('title' => 'Lễ khai giảng và chào đón tân sinh viên quốc tế', 'cat' => 'activities', 'image' => 'assets/images/news-opening-2024.png'),
         array('title' => 'Hội nghị hợp tác khoa học quốc tế SCH', 'cat' => 'activities', 'image' => 'assets/images/news-scientists.png'),
     );

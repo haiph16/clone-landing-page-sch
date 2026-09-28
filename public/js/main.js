@@ -50,7 +50,7 @@ function renderContacts(contacts) {
   const kr = contacts.koreaHeadquarters || {};
 
   // Top bar & Header
-  updateText('#top-hotline', vn.hotline || '096 841 45 86');
+  updateText('#top-hotline', vn.hotline || '0327 366 093');
   updateHref('#top-hotline-link', `tel:${(vn.hotline || '0327366093').replace(/\s+/g, '')}`);
   updateText('#top-email', vn.email || 'haiph161299@gmail.com');
   updateHref('#top-email-link', `mailto:${vn.email || 'haiph161299@gmail.com'}`);
@@ -62,9 +62,9 @@ function renderContacts(contacts) {
 
   // Contact section: VN Office
   updateText('#vn-office-name', vn.name || 'Văn phòng tuyển sinh SCH Việt Nam');
-  updateText('#vn-address-new', vn.currentAddress || 'BT7,8,9 Lô BT3, KĐT Xuân Phương, Hà Nội');
+  updateText('#vn-address-new', vn.currentAddress || 'Tầng 5, Tòa nhà Landmark 72, Nam Từ Liêm, Hà Nội');
   updateText('#vn-address-old', vn.oldAddress ? `(Địa chỉ cũ: ${vn.oldAddress})` : '');
-  updateText('#vn-phone', vn.phone || '096 841 45 86');
+  updateText('#vn-phone', vn.phone || '0327 366 093');
   updateHref('#vn-phone-link', `tel:${(vn.phone || '0327366093').replace(/\s+/g, '')}`);
   updateText('#vn-email', vn.email || 'haiph161299@gmail.com');
   updateHref('#vn-email-link', `mailto:${vn.email || 'haiph161299@gmail.com'}`);
@@ -80,10 +80,10 @@ function renderContacts(contacts) {
   updateText('#kr-hq-name', kr.name || 'Trường Đại học Soon Chun Hyang');
   updateText('#kr-hq-addr', kr.address || '22-9 Soonchunhyang-ro, Sinchang-myeon, Asan-si, Chungnam');
   updateText('#kr-hq-addr-kr', kr.addressKorean ? `(${kr.addressKorean})` : '');
-  updateText('#kr-hq-phone', kr.phone || '+82-41-530-1303');
-  updateHref('#kr-hq-phone-link', `tel:${(kr.phone || '+82415301303').replace(/\s+/g, '')}`);
-  updateText('#kr-hq-email', kr.email || 'yecha@sch.ac.kr');
-  updateHref('#kr-hq-email-link', `mailto:${kr.email || 'yecha@sch.ac.kr'}`);
+  updateText('#kr-hq-phone', kr.phone || '+82-41-530-1000');
+  updateHref('#kr-hq-phone-link', `tel:${(kr.phone || '+82415301000').replace(/\s+/g, '')}`);
+  updateText('#kr-hq-email', kr.email || 'admissions@sch-university.kr');
+  updateHref('#kr-hq-email-link', `mailto:${kr.email || 'admissions@sch-university.kr'}`);
   updateHref('#kr-hq-web-link', kr.website || 'https://www.sch.ac.kr');
 
   // Footer Contacts

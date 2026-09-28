@@ -84,7 +84,7 @@ Lệnh này sẽ tự động crawl trang WordPress nội bộ, chuyển đổi 
 
 ### 🎨 Tổng Quan Các Thành Phần Giao Diện Đã Tích Hợp
 
-- **Top Announcement Strip**: Địa chỉ mới Foresa Xuân Phương, số Hotline 096 841 45 86, email tư vấn.
+- **Top Announcement Strip**: Địa chỉ văn phòng Landmark 72 Hà Nội, số Hotline 0327 366 093, email haiph161299@gmail.com.
 - **Hero Slider**: Chuyển slide mượt mà tự động sau 5.5 giây kèm chấm định vị và nút điều hướng.
 - **Dải Thống Kê Số Liệu (Counter-up)**: Đếm tăng dần tự động khi cuộn trang (90% Visa, Top 5 Hàn Quốc, 100 Tỷ Won, 4000 KTX).
 - **Giới Thiệu Đại Học SCH**: Lịch sử 48 năm, 5 viện đào tạo mũi nhọn, 4 bệnh viện lớn và giảng đường thông minh HyFlex.
