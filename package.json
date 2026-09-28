@@ -3,14 +3,15 @@
   "version": "2.0.0",
   "description": "Cổng thông tin tuyển sinh Đại học Soonchunhyang Việt Nam (WordPress + Tailwind CSS + GitHub Pages Export)",
   "scripts": {
-    "start": "node preview_server.cjs",
-    "preview": "node preview_server.cjs",
-    "build:static": "node build_static.cjs",
+    "start": "node scripts/preview-server.cjs",
+    "preview": "node scripts/preview-server.cjs",
+    "build:static": "node scripts/build-static.cjs",
     "build:css": "npx tailwindcss -c ./wp-content/themes/soonchunhyang-tailwind/tailwind.config.js -i ./wp-content/themes/soonchunhyang-tailwind/assets/css/input.css -o ./wp-content/themes/soonchunhyang-tailwind/assets/css/tailwind.css --minify",
     "watch:css": "npx tailwindcss -c ./wp-content/themes/soonchunhyang-tailwind/tailwind.config.js -i ./wp-content/themes/soonchunhyang-tailwind/assets/css/input.css -o ./wp-content/themes/soonchunhyang-tailwind/assets/css/tailwind.css --watch",
     "wp:start": "php -S localhost:8000",
     "wp:seed": "php seed_initial_data.php",
-    "deploy": "node build_static.cjs && gh-pages -d docs"
+    "images:download": "node scripts/download-images.cjs",
+    "deploy": "node scripts/build-static.cjs && gh-pages -d docs"
   },
   "devDependencies": {
     "autoprefixer": "^10.6.1",

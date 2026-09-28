@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOON CHUN HYANG UNIVERSITY - VĂN PHÒNG TUYỂN SINH TRƯỜNG SOON CHUN HYANG TẠI VIỆT NAM</title>
+  <meta name="description"
+    content="Cổng thông tin tuyển sinh chính thức của Đại học Soonchunhyang Hàn Quốc tại Việt Nam. Tìm hiểu chương trình đào tạo, học bổng, việc làm và đăng ký tư vấn miễn phí." />
+  <link rel="icon" href="/images/logo.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="badge-official"><i class="fa-solid fa-award"></i> Văn phòng đại diện chính thức</span>
+          <span class="top-item" id="top-address-wrap">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="top-address">KĐT sinh thái Xuân Phương, Nam Từ Liêm, TP. Hà Nội</span>
+          </span>
+        </div>
+        <div class="top-bar-right">
+          <a href="tel:0327366093" class="top-item" id="top-hotline-link">
+            <i class="fa-solid fa-phone"></i>
+            <span>Hotline: <strong id="top-hotline">096 841 45 86</strong></span>
+          </a>
+          <a href="mailto:haiph161299@gmail.com" class="top-item" id="top-email-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span id="top-email">haiph161299@gmail.com</span>
+          </a>
+          <div class="top-socials">
+            <a href="#" class="top-social-link" id="link-fb" title="Facebook" target="_blank"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="top-social-link" id="link-zalo" title="Zalo" target="_blank"><i
+                class="fa-solid fa-comment-dots"></i></a>
+            <a href="#" class="top-social-link" id="link-yt" title="YouTube" target="_blank"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+          <a href="/admin" class="admin-link-badge" title="Đăng nhập quản trị hệ thống">
+            <i class="fa-solid fa-lock"></i> Quản trị
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN HEADER & NAVIGATION ================= -->
+  <header class="main-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#home" class="brand-logo-wrap">
+          <img src="/images/logo.svg" alt="Soonchunhyang University" class="brand-logo" />
+          <div class="brand-text-block">
+            <span class="brand-title">SOON CHUN HYANG</span>
+            <span class="brand-subtitle">Văn Phòng Tuyển Sinh Tại Việt Nam</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li class="nav-item"><a href="#home" class="nav-link active">Trang chủ</a></li>
+          <li class="nav-item"><a href="#gioi-thieu" class="nav-link">Giới thiệu</a></li>
+          <li class="nav-item"><a href="#uu-the" class="nav-link">Ưu thế SCH</a></li>
+          <li class="nav-item"><a href="#tuyen-sinh" class="nav-link">Tuyển sinh</a></li>
+          <li class="nav-item"><a href="#viec-lam" class="nav-link">Việc làm tại Hàn</a></li>
+          <li class="nav-item"><a href="#thu-vien-anh" class="nav-link">Hình ảnh</a></li>
+          <li class="nav-item"><a href="#tin-tuc" class="nav-link">Tin tức</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link">Hỏi đáp</a></li>
+          <li class="nav-item"><a href="#lien-he" class="nav-link">Liên hệ</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#dang-ky" class="btn btn-primary btn-pulse">
+            <i class="fa-solid fa-paper-plane"></i> Đăng Ký Tư Vấn
+          </a>
+          <button class="mobile-toggle" aria-label="Mở menu điều hướng">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO SLIDER SECTION ================= -->
+  <section id="home" class="hero-slider-section">
+    <div class="slider-container" id="hero-slider-wrap">
+      <!-- Dynamic slides rendered via JavaScript -->
+      <div class="slide-item active">
+        <div class="slide-bg" style="background-image: url('/images/banner-1.webp');"></div>
+        <div class="slide-overlay"></div>
+        <div class="container">
+          <div class="slide-content-wrap">
+            <div class="slide-badge"><i class="fa-solid fa-graduation-cap"></i> CHƯƠNG TRÌNH ĐÀO TẠO TOÀN CẦU</div>
+            <h1 class="slide-title">SCH Chuyên Ngành Toàn Cầu</h1>
+            <p class="slide-desc">Hãy đến học tại Đại học Soonchunhyang và tận hưởng thiên nhiên tươi đẹp, môi trường
+              giàu văn hóa cùng nền giáo dục đẳng cấp quốc tế.</p>
+            <div class="slide-buttons">
+              <a href="#dang-ky" class="btn btn-primary btn-pulse">ĐĂNG KÝ TƯ VẤN <i
+                  class="fa-solid fa-arrow-right"></i></a>
+              <a href="#gioi-thieu" class="btn btn-outline-white">TÌM HIỂU THÊM <i
+                  class="fa-solid fa-circle-info"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Navigation Buttons -->
+    <button class="slider-arrow slider-prev" id="slider-prev-btn" aria-label="Slide trước"><i
+        class="fa-solid fa-chevron-left"></i></button>
+    <button class="slider-arrow slider-next" id="slider-next-btn" aria-label="Slide tiếp theo"><i
+        class="fa-solid fa-chevron-right"></i></button>
+
+    <!-- Slider Dots -->
+    <div class="slider-dots" id="slider-dots"></div>
+  </section>
+
+  <!-- ================= KEY STATS COUNTER STRIP ================= -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-passport"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" data-target="90" data-suffix="%">0%</div>
+            <div class="stat-label">Tỷ Lệ Xét Đỗ Visa Top Đầu</div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" data-target="5" data-suffix=" Top">0</div>
+            <div class="stat-label">Hàn Quốc (Bảng Xếp Hạng THE)</div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-won-sign"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" data-target="100" data-suffix=" Tỷ">0</div>
+            <div class="stat-label">Gói Tài Trợ Toàn Cầu 5 Năm</div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-hotel"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" data-target="4000" data-suffix="+">0</div>
+            <div class="stat-label">Chỗ Ở KTX Chuẩn 5 Sao</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ABOUT UNIVERSITY SECTION ================= -->
+  <section id="gioi-thieu" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <img src="/images/banner-2.webp" alt="Khuôn viên Đại học Soonchunhyang" class="about-main-img" />
+          <div class="about-floating-badge">
+            <div class="badge-big-num">48+</div>
+            <div class="badge-text">Năm Kiến Tạo Tri Thức & Nhân Lực Toàn Cầu (Thành lập 1978)</div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag"><i class="fa-solid fa-landmark"></i> Tổng quan nhà trường</span>
+          <h2 class="section-title">Đại Học <span>Soon Chun Hyang</span></h2>
+          <p class="about-lead">
+            Thành lập năm 1978, tọa lạc tại thành phố Asan yên bình bên bờ biển phía Tây Hàn Quốc. SCH mang đến môi
+            trường học tập lý tưởng được bao bọc bởi núi non hùng vĩ và gần các trung tâm công nghiệp lớn của xứ sở Kim
+            Chi.
+          </p>
+          <div class="about-features-list">
+            <div class="about-feature-item">
+              <i class="fa-solid fa-check"></i>
+              <div class="about-feature-text">
+                <strong>5 Viện Đại Học Chuyên Sâu:</strong> Nhân văn, Khoa học Xã hội, Khoa học Tự nhiên, Kỹ thuật và Y
+                khoa.
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <i class="fa-solid fa-check"></i>
+              <div class="about-feature-text">
+                <strong>Hệ Thống 4 Bệnh Viện Đa Khoa Lớn:</strong> Sở hữu và trực tiếp vận hành 4 bệnh viện tại Seoul,
+                Cheonan, Bucheon và Gumi với hơn 3.000 giường bệnh.
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <i class="fa-solid fa-check"></i>
+              <div class="about-feature-text">
+                <strong>Môi Trường HyFlex Tiên Phong:</strong> Giảng đường thông minh, thư viện metaverse 24/7 và hệ
+                sinh thái học tập toàn cầu.
+              </div>
+            </div>
+          </div>
+          <a href="#dang-ky" class="btn btn-primary">
+            Nhận Tài Liệu Giới Thiệu Trường <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3 HIGHLIGHT ADVANTAGES ================= -->
+  <section id="uu-the" class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-star"></i> Lý do lựa chọn</span>
+        <h2 class="section-title">Ưu Thế Nổi Bật Tại <span>Soonchunhyang</span></h2>
+        <p class="section-desc">SCH cung cấp điều kiện học tập hoàn hảo, tỷ lệ xét visa cao và môi trường phát triển
+          toàn diện cho du học sinh Việt Nam.</p>
+      </div>
+
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon-wrap">
+            <img src="/images/icon-cert.svg" alt="Tỷ lệ visa"
+              onerror="this.innerHTML='<i class=\'fa-solid fa-award\'></i>'" />
+          </div>
+          <h3 class="highlight-title">90% Sinh Viên Đỗ Visa</h3>
+          <p class="highlight-desc">Đại học Soonchunhyang là một trong những trường đại học có tỷ lệ xét duyệt Visa cao
+            nhất tại Hàn Quốc, được hưởng chính sách xét tuyển ưu tiên và miễn phỏng vấn ĐSQ đối với hệ D2-2.</p>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-icon-wrap">
+            <img src="/images/icon-school.svg" alt="Ký túc xá"
+              onerror="this.innerHTML='<i class=\'fa-solid fa-building\'></i>'" />
+          </div>
+          <h3 class="highlight-title">4 Ký Túc Xá Hiện Đại</h3>
+          <p class="highlight-desc">Trường hiện có 4 ký túc xá lớn vô cùng hiện đại và sạch sẽ, rộng rãi với sức chứa
+            khoảng 4.000 sinh viên. Tiện nghi đầy đủ: gym, phòng tự học, căn tin và an ninh 24/7.</p>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-icon-wrap">
+            <img src="/images/icon-student.svg" alt="Kết nối du học sinh"
+              onerror="this.innerHTML='<i class=\'fa-solid fa-users\'></i>'" />
+          </div>
+          <h3 class="highlight-title">Kết Nối Du Học Sinh</h3>
+          <p class="highlight-desc">Cầu nối giúp sinh viên quốc tế giao lưu, học hỏi, làm quen với văn hóa Hàn Quốc và
+            nhận được sự hỗ trợ tận tình từ nhà trường về học tập, đời sống và định hướng nghề nghiệp sau tốt nghiệp.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3 GLOBAL PRESTIGE PILLARS ================= -->
+  <section class="prestige-strip">
+    <div class="container">
+      <div class="prestige-grid">
+        <div class="prestige-item">
+          <span class="prestige-badge">Tài trợ Quốc gia</span>
+          <h3>Trường Đại Học Toàn Cầu</h3>
+          <p>Trường nhận được gói hỗ trợ tài chính 100 tỷ won trong 5 năm từ Chính phủ Hàn Quốc, nhằm bồi dưỡng nhân tài
+            chất lượng cao và mở rộng hợp tác học thuật chuẩn quốc tế.</p>
+        </div>
+
+        <div class="prestige-item">
+          <span class="prestige-badge">Chất lượng bậc nhất</span>
+          <h3>Giải Thưởng Sáng Tạo Quốc Gia</h3>
+          <p>3 năm liên tiếp được Bộ Giáo dục Hàn Quốc trao tặng Giải thưởng Sáng tạo Giáo dục Quốc gia. Soon Chun Hyang
+            đứng thứ 3 toàn quốc về tỷ lệ chọi học sinh nhập học.</p>
+        </div>
+
+        <div class="prestige-item">
+          <span class="prestige-badge">Xếp hạng Thế giới</span>
+          <h3>Top 5 Hàn Quốc & Top 100 Toàn Cầu</h3>
+          <p>Bảng xếp hạng tác động THE (Times Higher Education). Riêng lĩnh vực Y khoa, trường đứng thứ 10 trong nước
+            và Top 400 thế giới năm 2024.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACADEMIC PROGRAMS & MAJORS ================= -->
+  <section id="tuyen-sinh" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-book-open"></i> Đào tạo chuẩn quốc tế</span>
+        <h2 class="section-title">Chương Trình Đào Tạo & <span>Ngành Học</span></h2>
+        <p class="section-desc">Đa dạng chuyên ngành từ khối Y Dược, Trí tuệ nhân tạo, Kinh doanh đến Khoa học xã hội
+          với chính sách học bổng từ 30% - 100% học phí.</p>
+      </div>
+
+      <div class="programs-grid">
+        <div class="program-card">
+          <span class="program-tag">Khối Y Tế & Sức Khỏe</span>
+          <h3 class="program-title">Y Khoa & Điều Dưỡng Đa Khoa</h3>
+          <p class="program-desc">Ngành mũi nhọn hàng đầu với cơ hội thực tập trực tiếp tại 4 bệnh viện đại học trực
+            thuộc SCH tại Seoul và Cheonan. Đào tạo theo chuẩn y khoa quốc tế.</p>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 - 6 năm</span>
+            <span><i class="fa-solid fa-award"></i> Học bổng 50-100%</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <span class="program-tag">Công Nghệ Tương Lai</span>
+          <h3 class="program-title">Khoa Học AI & Công Nghệ Thông Tin</h3>
+          <p class="program-desc">Trang bị kiến thức chuyên sâu về Trí tuệ nhân tạo, Machine Learning, Robotics và phát
+            triển phần mềm trong kỷ nguyên số 4.0.</p>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 năm</span>
+            <span><i class="fa-solid fa-award"></i> Học bổng 30-70%</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <span class="program-tag">Dữ Liệu Lớn</span>
+          <h3 class="program-title">Kỹ Thuật Dữ Liệu Lớn (Big Data)</h3>
+          <p class="program-desc">Chuyên ngành then chốt được các tập đoàn hàng đầu Hàn Quốc săn đón (Samsung, LG, SK
+            Telecom). Thực hành dự án dữ liệu doanh nghiệp thực tế.</p>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 năm</span>
+            <span><i class="fa-solid fa-award"></i> Học bổng 40-80%</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <span class="program-tag">Kinh Tế Toàn Cầu</span>
+          <h3 class="program-title">Quản Trị Kinh Doanh & Tài Chính IT</h3>
+          <p class="program-desc">Kết hợp giữa tư duy quản trị tài chính hiện đại và ứng dụng công nghệ Fintech, chuẩn
+            bị sẵn sàng cho sự nghiệp tại các định chế tài chính quốc tế.</p>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 năm</span>
+            <span><i class="fa-solid fa-award"></i> Học bổng 30-100%</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <span class="program-tag">Kiến Trúc & Đô Thị</span>
+          <h3 class="program-title">Kiến Trúc & Thiết Kế Không Gian</h3>
+          <p class="program-desc">Đào tạo kiến trúc sư hiện đại, chú trọng kiến trúc xanh, công nghệ BIM và quy hoạch đô
+            thị thông minh tại Hàn Quốc và châu Á.</p>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 - 5 năm</span>
+            <span><i class="fa-solid fa-award"></i> Học bổng 40-70%</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <span class="program-tag">Ngôn Ngữ & Văn Hóa</span>
+          <h3 class="program-title">Ngôn Ngữ & Văn Hóa Hàn Quốc</h3>
+          <p class="program-desc">Đào tạo chuyên gia ngôn ngữ, biên phiên dịch viên cấp cao, giáo viên tiếng Hàn và nhà
+            nghiên cứu văn hóa truyền thông Hàn Quốc.</p>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 năm</span>
+            <span><i class="fa-solid fa-award"></i> Học bổng 30-80%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= JOBS IN KOREA POLICY ================= -->
+  <section id="viec-lam" class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Cơ hội tương lai</span>
+        <h2 class="section-title">Việc Làm & Định Cư <span>Tại Hàn Quốc</span></h2>
+        <p class="section-desc">Hệ thống hỗ trợ việc làm toàn diện từ Trung tâm University Job Plus của SCH giúp sinh
+          viên vừa học vừa làm hợp pháp và chuyển đổi visa E7 sau khi tốt nghiệp.</p>
+      </div>
+
+      <div class="jobs-container">
+        <!-- D4-1 System -->
+        <div class="job-policy-card">
+          <div class="job-card-header">
+            <span class="visa-badge">D4-1</span>
+            <div>
+              <h3>Hệ Du Học Tiếng Hàn</h3>
+              <p style="color: var(--text-muted); font-size: 0.88rem;">Thời gian đào tạo tiếng: 1 - 2 năm</p>
+            </div>
+          </div>
+          <ul class="job-list">
+            <li><i class="fa-solid fa-circle-check"></i> Được cấp giấy phép đi làm thêm hợp pháp sau <strong>6
+                tháng</strong> cư trú tại Hàn Quốc.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Thời lượng làm thêm: <strong>20 - 25 giờ/tuần</strong> trong kỳ
+              học, không giới hạn vào các kỳ nghỉ đông/hè.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Thu nhập làm thêm trung bình từ <strong>9.860 – 13.000
+                KRW/giờ</strong> (tương đương 20 - 35 triệu VNĐ/tháng).</li>
+            <li><i class="fa-solid fa-circle-check"></i> Chuyển tiếp thẳng lên chuyên ngành đại học D2-2 ngay khi đạt
+              chứng chỉ TOPIK 3.</li>
+          </ul>
+          <a href="#dang-ky" class="btn btn-primary" style="width: 100%;">Tư Vấn Lộ Trình Hệ Tiếng D4-1</a>
+        </div>
+
+        <!-- D2-2 System -->
+        <div class="job-policy-card featured">
+          <div class="job-card-header">
+            <span class="visa-badge" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">D2-2</span>
+            <div>
+              <h3>Hệ Đại Học Chuyên Ngành</h3>
+              <p style="color: var(--text-muted); font-size: 0.88rem;">Thời gian đào tạo: 4 năm (Bằng cử nhân chính quy)
+              </p>
+            </div>
+          </div>
+          <ul class="job-list">
+            <li><i class="fa-solid fa-circle-check"></i> Cấp giấy phép đi làm thêm chỉ sau <strong>30 - 35 ngày</strong>
+              nhập học.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Miễn phỏng vấn</strong> tại Đại sứ quán / Tổng lãnh sự
+              quán Hàn Quốc khi nộp hồ sơ SCH.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Sở hữu thẻ BHYT cá nhân độc lập với đầy đủ quyền lợi y tế chuẩn
+              quốc tế.</li>
+            <li><i class="fa-solid fa-circle-check"></i> Tốt nghiệp được cấp visa tìm việc <strong>D-10 (2 năm)</strong>
+              và hỗ trợ chuyển đổi sang visa làm việc dài hạn <strong>E-7 / F-2</strong>.</li>
+          </ul>
+          <a href="#dang-ky" class="btn btn-accent" style="width: 100%;">Tư Vấn Nộp Hồ Sơ Thẳng D2-2</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PHOTO GALLERY (DYNAMIC) ================= -->
+  <section id="thu-vien-anh" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-camera"></i> Hình ảnh thực tế</span>
+        <h2 class="section-title">Thư Viện Ảnh <span>Soonchunhyang</span></h2>
+        <p class="section-desc">Khám phá không gian học tập hiện đại, ký túc xá tiện nghi và hệ sinh thái năng động của
+          Đại học Soonchunhyang.</p>
+      </div>
+
+      <div class="gallery-filter">
+        <button class="tab-btn gallery-tab-btn active" data-category="all">Tất cả</button>
+        <button class="tab-btn gallery-tab-btn" data-category="campus">Khuôn viên trường</button>
+        <button class="tab-btn gallery-tab-btn" data-category="dormitory">Ký túc xá</button>
+        <button class="tab-btn gallery-tab-btn" data-category="hospital">Bệnh viện SCH</button>
+        <button class="tab-btn gallery-tab-btn" data-category="activities">Sự kiện & Hoạt động</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered dynamically via JS from Backend API -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWS & ANNOUNCEMENTS ================= -->
+  <section id="tin-tuc" class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-newspaper"></i> Bản tin cập nhật</span>
+        <h2 class="section-title">Tin Tức & <span>Sự Kiện Nổi Bật</span></h2>
+        <p class="section-desc">Cập nhật thông tin tuyển sinh mới nhất, các hoạt động học thuật và thông báo từ Văn
+          phòng đại diện SCH tại Việt Nam.</p>
+      </div>
+
+      <div class="news-grid" id="news-grid">
+        <!-- Rendered dynamically via JS from Backend API -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS SLIDER ================= -->
+  <section id="cam-nhan" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-comments"></i> Du học sinh nói gì</span>
+        <h2 class="section-title">Cảm Nhận Của <span>Sinh Viên Việt Nam</span></h2>
+        <p class="section-desc">Những chia sẻ chân thực từ các bạn cựu du học sinh và sinh viên đang theo học tại giảng
+          đường Đại học Soonchunhyang.</p>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonials-track" id="testimonials-track">
+          <!-- Rendered dynamically via JS from Backend API -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ SECTION ================= -->
+  <section id="faq" class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Giải đáp thắc mắc</span>
+        <h2 class="section-title">Câu Hỏi <span>Thường Gặp</span></h2>
+        <p class="section-desc">Những thông tin giải đáp chi tiết nhất về điều kiện nhập học, học bổng, việc làm và chi
+          phí du học tại Soonchunhyang.</p>
+      </div>
+
+      <div class="faq-wrap" id="faq-accordion-wrap">
+        <!-- Accordion items rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONSULTATION REGISTRATION FORM SECTION ================= -->
+  <section id="dang-ky" class="section lead-form-section">
+    <div class="container">
+      <div class="form-grid">
+        <div class="form-info">
+          <span class="slide-badge" style="background: rgba(30, 187, 240, 0.25); color: #70d8ff;">TUYỂN SINH DU HỌC HÀN
+            QUỐC 2025 - 2026</span>
+          <h2>Đăng Ký Tư Vấn & <span>Nộp Hồ Sơ Miễn Phí</span></h2>
+          <p>Để được tư vấn chuyên sâu về các ngành học, lộ trình visa, chương trình học bổng và chi phí sinh hoạt tại
+            Đại học Soon Chun Hyang, vui lòng điền thông tin bên dưới. Cán bộ văn phòng tuyển sinh sẽ liên hệ hỗ trợ bạn
+            trong vòng 24 giờ.</p>
+
+          <div class="form-contact-cards">
+            <div class="form-contact-item">
+              <div class="form-contact-icon"><i class="fa-solid fa-phone-volume"></i></div>
+              <div class="form-contact-text">
+                <h4>Hotline Tư Vấn Trực Tiếp:</h4>
+                <p>096 841 45 86</p>
+              </div>
+            </div>
+
+            <div class="form-contact-item">
+              <div class="form-contact-icon"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="form-contact-text">
+                <h4>Văn Phòng Đại Diện Hà Nội:</h4>
+                <p>BT7,8,9 Lô BT3, KĐT Foresa Xuân Phương, Nam Từ Liêm, TP. Hà Nội</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lead-form-card">
+          <h3 class="form-card-title">Phiếu Đăng Ký Tư Vấn Tuyển Sinh</h3>
+          <p class="form-card-subtitle">Hoàn toàn miễn phí - Bảo mật tuyệt đối thông tin cá nhân</p>
+
+          <form id="consultation-form">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label class="form-label">Họ và tên <span class="req">*</span></label>
+                <input type="text" name="fullName" class="form-control" placeholder="Nguyễn Văn A" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Số điện thoại / Zalo <span class="req">*</span></label>
+                <input type="tel" name="phone" class="form-control" placeholder="0987 654 321" required />
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label class="form-label">Email liên hệ</label>
+                <input type="email" name="email" class="form-control" placeholder="example@gmail.com" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Tỉnh / Thành phố <span class="req">*</span></label>
+                <select name="province" class="form-control" required>
+                  <option value="">-- Chọn Tỉnh / Thành --</option>
+                  <option value="Hà Nội">Hà Nội</option>
+                  <option value="Hồ Chí Minh">TP. Hồ Chí Minh</option>
+                  <option value="Hải Phòng">Hải Phòng</option>
+                  <option value="Đà Nẵng">Đà Nẵng</option>
+                  <option value="Nghệ An">Nghệ An</option>
+                  <option value="Thanh Hóa">Thanh Hóa</option>
+                  <option value="Hà Tĩnh">Hà Tĩnh</option>
+                  <option value="Nam Định">Nam Định</option>
+                  <option value="Bắc Ninh">Bắc Ninh</option>
+                  <option value="Hải Dương">Hải Dương</option>
+                  <option value="Quảng Ninh">Quảng Ninh</option>
+                  <option value="Thái Nguyên">Thái Nguyên</option>
+                  <option value="Cần Thơ">Cần Thơ</option>
+                  <option value="Khác">Tỉnh / Thành khác</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Ngành học hoặc Hệ đào tạo quan tâm</label>
+              <select name="major" class="form-control">
+                <option value="">-- Chọn Ngành học / Hệ đào tạo --</option>
+                <option value="Hệ tiếng D4-1 (Học tiếng Hàn)">Hệ tiếng D4-1 (Khóa học tiếng Hàn)</option>
+                <option value="Y khoa & Điều dưỡng">Y khoa & Chăm sóc sức khỏe</option>
+                <option value="Khoa học AI & CNTT">Trí tuệ nhân tạo (AI) & Khoa học máy tính</option>
+                <option value="Kỹ thuật Dữ liệu lớn (Big Data)">Kỹ thuật Dữ liệu lớn (Big Data)</option>
+                <option value="Quản trị Kinh doanh & Tài chính IT">Quản trị Kinh doanh & Tài chính IT</option>
+                <option value="Kiến trúc & Thiết kế">Kiến trúc & Thiết kế thông minh</option>
+                <option value="Ngôn ngữ & Văn hóa Hàn Quốc">Ngôn ngữ & Văn hóa Hàn Quốc</option>
+                <option value="Khác">Chuyên ngành khác</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Câu hỏi hoặc ghi chú thêm (nếu có)</label>
+              <textarea name="notes" class="form-control"
+                placeholder="Ví dụ: Em muốn tìm hiểu học bổng kỳ tháng 9, đã có TOPIK 2..."></textarea>
+            </div>
+
+            <label class="form-checkbox-label">
+              <input type="checkbox" required checked />
+              <span>Đồng ý để thông tin của bạn được tiếp nhận và xử lý bởi Văn phòng đại diện Trường Đại học
+                Soonchunhyang tại Việt Nam.</span>
+            </label>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 14px 20px;">
+              <i class="fa-solid fa-paper-plane"></i> GỬI YÊU CẦU TƯ VẤN NGAY
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & LOCATION DETAILS ================= -->
+  <section id="lien-he" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-map-pin"></i> Thông tin liên hệ</span>
+        <h2 class="section-title">Văn Phòng Tuyển Sinh & <span>Trụ Sở SCH</span></h2>
+        <p class="section-desc">Quý phụ huynh và học sinh có thể đến trực tiếp văn phòng tại Hà Nội để được tư vấn hồ sơ
+          hoặc liên hệ đường dây nóng của nhà trường.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Vietnam Office -->
+        <div class="office-card">
+          <div class="office-flag-title">
+            <span class="flag-icon">🇻🇳</span>
+            <h3 id="vn-office-name">Văn Phòng Tuyển Sinh Tại Việt Nam</h3>
+          </div>
+
+          <div class="office-detail-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Địa chỉ mới:</strong>
+              <p id="vn-address-new">BT7,8,9 Lô BT3, đường Foresa 5A, KĐT sinh thái Xuân Phương, phường Xuân Phương, TP.
+                Hà Nội</p>
+              <small id="vn-address-old" style="color: var(--text-light);">(Địa chỉ cũ: Số 66-68 Ngõ 28/11 Dương Khuê,
+                Phường Phú Diễn, TP. Hà Nội)</small>
+            </div>
+          </div>
+
+          <div class="office-detail-row">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Điện thoại / Hotline:</strong>
+              <p><a href="tel:0327366093" id="vn-phone-link"><strong id="vn-phone" style="color: var(--primary);">096
+                    841 45 86</strong></a></p>
+            </div>
+          </div>
+
+          <div class="office-detail-row">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email liên hệ:</strong>
+              <p><a href="mailto:haiph161299@gmail.com" id="vn-email-link" id="vn-email">haiph161299@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="office-detail-row">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <strong>Giờ làm việc:</strong>
+              <p id="vn-hours">Thứ Hai - Thứ Bảy: 08:00 - 17:30</p>
+            </div>
+          </div>
+
+          <div class="map-wrapper">
+            <iframe id="vn-map-iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.896796593922!2d105.73663047587042!3d21.036814987501306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b5dfd4f8fb%3A0x6b4be93e9ad15f21!2zS8SQVCBYdcOibiBQaMawxqFuZw!5e0!3m2!1svi!2svn!4v1710000000000"
+              loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- Korea Headquarters -->
+        <div class="office-card">
+          <div class="office-flag-title">
+            <span class="flag-icon">🇰🇷</span>
+            <h3 id="kr-hq-name">Trường Đại Học Soon Chun Hyang (순천향대학교)</h3>
+          </div>
+
+          <div class="office-detail-row">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <div>
+              <strong>Trụ sở chính tại Hàn Quốc:</strong>
+              <p id="kr-hq-addr">22-9 Soonchunhyang-ro, Sinchang-myeon, Asan-si, Chungcheongnam-do, Republic of Korea
+              </p>
+              <small id="kr-hq-addr-kr" style="color: var(--text-light);">(충청남도 아산시 신창면 순천향로 22-9)</small>
+            </div>
+          </div>
+
+          <div class="office-detail-row">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Điện thoại quốc tế:</strong>
+              <p><a href="tel:+82415301303" id="kr-hq-phone-link"><strong id="kr-hq-phone"
+                    style="color: var(--primary);">+82-41-530-1303</strong></a></p>
+            </div>
+          </div>
+
+          <div class="office-detail-row">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email tuyển sinh quốc tế:</strong>
+              <p><a href="mailto:yecha@sch.ac.kr" id="kr-hq-email-link" id="kr-hq-email">yecha@sch.ac.kr</a></p>
+            </div>
+          </div>
+
+          <div class="office-detail-row">
+            <i class="fa-solid fa-globe"></i>
+            <div>
+              <strong>Website chính thức nhà trường:</strong>
+              <p><a href="https://www.sch.ac.kr" target="_blank" id="kr-hq-web-link"
+                  style="color: var(--primary); text-decoration: underline;">www.sch.ac.kr</a></p>
+            </div>
+          </div>
+
+          <div class="office-detail-row">
+            <i class="fa-solid fa-hospital"></i>
+            <div>
+              <strong>Hệ thống Bệnh viện Đại học SCH:</strong>
+              <p>Seoul • Bucheon • Cheonan • Gumi</p>
+            </div>
+          </div>
+
+          <div style="background: #f1f5f9; padding: 20px; border-radius: 12px; margin-top: auto;">
+            <h4 style="font-size: 0.95rem; color: var(--secondary); margin-bottom: 6px;"><i
+                class="fa-solid fa-shield-halved" style="color: var(--primary);"></i> Cam kết văn phòng đại diện</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">Văn phòng tại Hà Nội tiếp nhận hồ
+              sơ trực tiếp không qua trung gian, hỗ trợ hoàn thiện thủ tục visa, dịch thuật công chứng và chăm sóc sinh
+              viên suốt quá trình học tập tại Hàn Quốc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAIN FOOTER ================= -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="/images/logo-white.svg" alt="Soonchunhyang White Logo" class="footer-logo"
+            onerror="this.src='/images/logo.svg'" />
+          <p class="footer-about">
+            Đại học Soonchunhyang (SCH) – Ngôi trường đại học danh tiếng hàng đầu Hàn Quốc về khối ngành Y dược, Khoa
+            học công nghệ và Quản trị kinh doanh.
+          </p>
+          <div class="top-socials">
+            <a href="#" class="top-social-link"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="top-social-link"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="top-social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="top-social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liên Kết Nhanh</h4>
+          <div class="footer-links">
+            <a href="#home"><i class="fa-solid fa-chevron-right"></i> Trang chủ</a>
+            <a href="#gioi-thieu"><i class="fa-solid fa-chevron-right"></i> Về trường SCH</a>
+            <a href="#uu-the"><i class="fa-solid fa-chevron-right"></i> Ưu thế & Học bổng</a>
+            <a href="#tuyen-sinh"><i class="fa-solid fa-chevron-right"></i> Các ngành đào tạo</a>
+            <a href="#viec-lam"><i class="fa-solid fa-chevron-right"></i> Việc làm tại Hàn Quốc</a>
+            <a href="#faq"><i class="fa-solid fa-chevron-right"></i> Hỏi đáp FAQ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Văn Phòng Việt Nam</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="footer-vn-addr">BT7,8,9 Lô BT3, KĐT Foresa Xuân Phương, TP. Hà Nội</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span id="footer-vn-phone">096 841 45 86</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span id="footer-vn-email">haiph161299@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trụ Sở Hàn Quốc</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-building-columns"></i>
+            <span id="footer-kr-addr">22-9 Soonchunhyang-ro, Sinchang-myeon, Asan-si, Chungnam</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span id="footer-kr-phone">+82-41-530-1303</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-globe"></i>
+            <span>www.sch.ac.kr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Soonchunhyang University Vietnam. Bảo lưu mọi quyền.</div>
+        <div>
+          <a href="/admin" style="color: #94a3b8; margin-right: 16px;"><i class="fa-solid fa-lock"></i> Đăng nhập Quản
+            Trị</a>
+          <a href="#home" style="color: #94a3b8;"><i class="fa-solid fa-arrow-up"></i> Về đầu trang</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING ACTION BUTTONS ================= -->
+  <div class="floating-actions">
+    <a href="https://zalo.me/0327366093" target="_blank" class="float-btn float-zalo" id="float-zalo-link"
+      title="Chat Zalo Tư Vấn">
+      <i class="fa-solid fa-comment-dots"></i>
+      <span class="tooltip">Chat Zalo Tuyển Sinh</span>
+    </a>
+
+    <a href="tel:0327366093" class="float-btn float-phone" id="float-phone-link" title="Gọi Hotline">
+      <i class="fa-solid fa-phone"></i>
+      <span class="tooltip">Gọi 096 841 45 86</span>
+    </a>
+
+    <div class="float-btn float-top" id="float-top-btn" title="Lên đầu trang">
+      <i class="fa-solid fa-chevron-up"></i>
+    </div>
+  </div>
+
+  <!-- ================= LIGHTBOX IMAGE MODAL ================= -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img src="" id="lightbox-img" alt="Ảnh phóng to" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

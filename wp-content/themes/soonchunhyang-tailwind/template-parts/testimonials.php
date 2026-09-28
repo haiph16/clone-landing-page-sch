@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Part: Testimonials & Student Reviews
+ * Dữ liệu quản lý qua: wp-admin → Cài Đặt SCH → Cảm Nhận Sinh Viên
  *
  * @package Soonchunhyang
  */
@@ -9,29 +10,25 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-$theme_uri = get_template_directory_uri();
 $testimonials = array(
     array(
-        'id'     => 1,
-        'name'   => 'Nguyễn Thùy Giang',
-        'role'   => 'Sinh viên K59 Ngành Quản trị Kinh doanh',
-        'text'   => 'Khuôn viên trường rất xanh và trong lành. Thầy cô ở văn phòng quốc tế chăm sóc sinh viên Việt Nam chu đáo từ lúc đón tại sân bay Incheon đến khi nhận phòng ký túc xá.',
-        'avatar' => $theme_uri . '/assets/images/student-giang.jpg'
+        'name'   => sch_get_option('tm1_name', 'Nguyễn Thùy Giang'),
+        'role'   => sch_get_option('tm1_role', 'Sinh viên K59 Ngành Quản trị Kinh doanh'),
+        'text'   => sch_get_option('tm1_text', 'Khuôn viên trường rất xanh và trong lành. Thầy cô ở văn phòng quốc tế chăm sóc sinh viên Việt Nam chu đáo từ lúc đón tại sân bay Incheon đến khi nhận phòng ký túc xá.'),
+        'avatar' => sch_get_testimonial_avatar(1),
     ),
     array(
-        'id'     => 2,
-        'name'   => 'Trần Đức Huy',
-        'role'   => 'Kỹ sư phần mềm tại Seoul (Cựu sinh viên K56 CNTT)',
-        'text'   => 'Nhờ học bổng 80% của SCH mà mình giảm bớt gánh nặng tài chính rất nhiều. Trường có trung tâm hỗ trợ việc làm kết nối trực tiếp với các tập đoàn công nghệ lớn tại Hàn.',
-        'avatar' => $theme_uri . '/assets/images/student-huy.jpg'
+        'name'   => sch_get_option('tm2_name', 'Trần Đức Huy'),
+        'role'   => sch_get_option('tm2_role', 'Kỹ sư phần mềm tại Seoul (Cựu sinh viên K56 CNTT)'),
+        'text'   => sch_get_option('tm2_text', 'Nhờ học bổng 80% của SCH mà mình giảm bớt gánh nặng tài chính rất nhiều. Trường có trung tâm hỗ trợ việc làm kết nối trực tiếp với các tập đoàn công nghệ lớn tại Hàn.'),
+        'avatar' => sch_get_testimonial_avatar(2),
     ),
     array(
-        'id'     => 3,
-        'name'   => 'Lê Hoàng Dũng',
-        'role'   => 'Du học sinh năm 3 Ngành Y sinh lâm sàng',
-        'text'   => 'Hệ thống bệnh viện trường quá hiện đại, sinh viên được trực tiếp quan sát và thực tập lâm sàng. Quyết định học tập tại Soonchunhyang là bước ngoặt lớn của cuộc đời mình.',
-        'avatar' => $theme_uri . '/assets/images/student-dung.jpg'
-    )
+        'name'   => sch_get_option('tm3_name', 'Lê Hoàng Dũng'),
+        'role'   => sch_get_option('tm3_role', 'Du học sinh năm 3 Ngành Y sinh lâm sàng'),
+        'text'   => sch_get_option('tm3_text', 'Hệ thống bệnh viện trường quá hiện đại, sinh viên được trực tiếp quan sát và thực tập lâm sàng. Quyết định học tập tại Soonchunhyang là bước ngoặt lớn của cuộc đời mình.'),
+        'avatar' => sch_get_testimonial_avatar(3),
+    ),
 );
 ?>
 
@@ -67,7 +64,7 @@ $testimonials = array(
 
                     <div class="flex items-center gap-4 pt-4 border-t border-slate-200/60">
                         <img
-                            src="<?php echo esc_url($item['avatar']); ?>"
+                            src="<?php echo $item['avatar']; ?>"
                             alt="<?php echo esc_attr($item['name']); ?>"
                             class="w-13 h-13 rounded-full object-cover border-2 border-sch-600 shadow-sm"
                             style="width: 52px; height: 52px;"

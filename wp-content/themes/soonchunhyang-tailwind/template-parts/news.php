@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Part: News & Announcements Section
+ * Dữ liệu quản lý qua: wp-admin → Tin Tức (Custom Post Type sch_news)
  *
  * @package Soonchunhyang
  */
@@ -9,10 +10,15 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+$theme_uri = get_template_directory_uri();
+
+// Query sch_news CPT
 $news_query = new WP_Query(array(
-    'post_type'      => 'post',
+    'post_type'      => 'sch_news',
     'posts_per_page' => 3,
-    'post_status'    => 'publish'
+    'post_status'    => 'publish',
+    'orderby'        => 'date',
+    'order'          => 'DESC',
 ));
 
 $news_items = array();
@@ -20,53 +26,53 @@ $news_items = array();
 if ($news_query->have_posts()) {
     while ($news_query->have_posts()) {
         $news_query->the_post();
-        // Skip default Hello world if it's the only one without thumbnail
-        if (get_the_title() === 'Hello world!' && !has_post_thumbnail()) {
-            continue;
-        }
-        $thumb = get_the_post_thumbnail_url(get_the_ID(), 'large');
+        $id      = get_the_ID();
+        $thumb   = get_the_post_thumbnail_url($id, 'large');
+        $cats    = get_the_terms($id, 'sch_news_cat');
+        $cat_label = (!is_wp_error($cats) && !empty($cats)) ? $cats[0]->name : 'Tin Tức';
+
         $news_items[] = array(
-            'id'       => get_the_ID(),
+            'id'       => $id,
             'title'    => get_the_title(),
-            'summary'  => get_the_excerpt(),
+            'summary'  => get_post_meta($id, '_sch_news_summary', true) ?: get_the_excerpt(),
             'date'     => get_the_date('d/m/Y'),
-            'author'   => get_the_author(),
-            'category' => 'Tuyển Sinh',
-            'imageUrl' => $thumb ? $thumb : get_template_directory_uri() . '/assets/images/news-office.jpg'
+            'author'   => get_post_meta($id, '_sch_news_author', true) ?: get_the_author(),
+            'category' => $cat_label,
+            'imageUrl' => $thumb ?: $theme_uri . '/assets/images/news-office.jpg',
         );
     }
     wp_reset_postdata();
 }
 
+// Fallback nếu chưa có bài viết nào
 if (empty($news_items)) {
-    $theme_uri = get_template_directory_uri();
     $news_items = array(
         array(
-            'id'       => 1,
+            'id'       => 0,
             'title'    => 'Thông Báo Tuyển Sinh Kỳ Thu 2025 & Tiếp Nhận Hồ Sơ Chuyên Ngành D2-2',
             'summary'  => 'Văn phòng tuyển sinh SCH Việt Nam chính thức nhận hồ sơ ứng tuyển học bổng kỳ Thu 2025 với mức hỗ trợ lên tới 100% học phí dành cho học sinh có TOPIK 3 trở lên.',
             'date'     => '15/08/2025',
             'author'   => 'SCH Vietnam',
             'category' => 'Tuyển Sinh 2025',
-            'imageUrl' => $theme_uri . '/assets/images/news-opening-2025.png'
+            'imageUrl' => $theme_uri . '/assets/images/news-opening-2025.png',
         ),
         array(
-            'id'       => 2,
+            'id'       => 0,
             'title'    => 'Hội Thảo Định Hướng Việc Làm & Chuyển Đổi Visa E-7 Sau Tốt Nghiệp',
             'summary'  => 'Trung tâm University Job Plus phối hợp cùng các doanh nghiệp đối tác tại Hàn Quốc tổ chức chương trình hướng dẫn thực tập và cấp phép làm việc dài hạn cho sinh viên SCH.',
             'date'     => '28/07/2025',
             'author'   => 'Ban Hợp Tác',
             'category' => 'Việc Làm',
-            'imageUrl' => $theme_uri . '/assets/images/news-job-support.png'
+            'imageUrl' => $theme_uri . '/assets/images/news-job-support.png',
         ),
         array(
-            'id'       => 3,
+            'id'       => 0,
             'title'    => 'Lễ Trao Học Bổng Global Leader & Vinh Danh Sinh Viên Xuất Sắc 2024 - 2025',
             'summary'  => 'Đại học Soonchunhyang trao tặng học bổng Global Leader cho hơn 120 sinh viên quốc tế đạt thành tích học tập vượt trội trong năm học vừa qua.',
             'date'     => '10/06/2025',
             'author'   => 'SCH Media',
             'category' => 'Học Bổng',
-            'imageUrl' => $theme_uri . '/assets/images/news-scientists.png'
+            'imageUrl' => $theme_uri . '/assets/images/news-scientists.png',
         ),
     );
 }
@@ -142,5 +148,14 @@ if (empty($news_items)) {
                 </article>
             <?php endforeach; ?>
         </div>
+
+        <?php if ($news_query->found_posts > 3) : ?>
+        <div class="text-center mt-12">
+            <a href="<?php echo admin_url('edit.php?post_type=sch_news'); ?>" class="inline-flex items-center gap-2 bg-sch-700 text-white font-bold px-8 py-3 rounded-full hover:bg-sch-800 transition-colors">
+                <i class="fa-solid fa-newspaper"></i>
+                <span>Xem Tất Cả Tin Tức</span>
+            </a>
+        </div>
+        <?php endif; ?>
     </div>
 </section>

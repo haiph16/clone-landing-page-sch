@@ -297,3 +297,115 @@ function sch_custom_lead_column($column, $post_id) {
     }
 }
 add_action('manage_sch_lead_posts_custom_column', 'sch_custom_lead_column', 10, 2);
+
+
+// =========================================================
+// 4. Register News CPT (sch_news)
+// =========================================================
+function sch_register_news_cpt() {
+    $labels = array(
+        'name'          => 'Tin Tức & Thông Báo',
+        'singular_name' => 'Bài Viết',
+        'add_new'       => 'Thêm Bài Viết Mới',
+        'add_new_item'  => 'Thêm Tin Tức Mới',
+        'edit_item'     => 'Chỉnh Sửa Bài Viết',
+        'view_item'     => 'Xem Bài Viết',
+        'search_items'  => 'Tìm Bài Viết',
+        'not_found'     => 'Chưa có bài viết nào',
+        'menu_name'     => 'Tin Tức',
+    );
+
+    $args = array(
+        'labels'          => $labels,
+        'public'          => false,
+        'show_ui'         => true,
+        'show_in_menu'    => true,
+        'menu_icon'       => 'dashicons-megaphone',
+        'capability_type' => 'post',
+        'supports'        => array('title', 'thumbnail'),
+        'has_archive'     => false,
+        'menu_position'   => 6,
+    );
+
+    register_post_type('sch_news', $args);
+
+    // Category taxonomy for news
+    register_taxonomy('sch_news_cat', 'sch_news', array(
+        'labels'            => array(
+            'name'          => 'Danh Mục Tin Tức',
+            'singular_name' => 'Danh Mục',
+            'add_new_item'  => 'Thêm Danh Mục',
+        ),
+        'hierarchical'      => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+    ));
+}
+add_action('init', 'sch_register_news_cpt');
+
+// News Meta Boxes
+function sch_add_news_meta_boxes() {
+    add_meta_box('sch_news_details', 'Chi Tiết Bài Viết', 'sch_render_news_meta_box', 'sch_news', 'normal', 'high');
+}
+add_action('add_meta_boxes', 'sch_add_news_meta_boxes');
+
+function sch_render_news_meta_box($post) {
+    wp_nonce_field('sch_save_news_meta', 'sch_news_meta_nonce');
+    $author  = get_post_meta($post->ID, '_sch_news_author', true);
+    $summary = get_post_meta($post->ID, '_sch_news_summary', true);
+    $content = get_post_meta($post->ID, '_sch_news_content', true);
+    ?>
+    <table class="form-table">
+        <tr>
+            <th><label for="sch_news_author">Tác Giả / Nguồn</label></th>
+            <td><input type="text" id="sch_news_author" name="sch_news_author"
+                       value="<?php echo esc_attr($author); ?>" class="regular-text"
+                       placeholder="Ví dụ: Ban Truyền thông SCH" /></td>
+        </tr>
+        <tr>
+            <th><label for="sch_news_summary">Tóm Tắt (Hiển thị trên thẻ bài viết)</label></th>
+            <td><textarea id="sch_news_summary" name="sch_news_summary" rows="3" class="large-text"><?php echo esc_textarea($summary); ?></textarea></td>
+        </tr>
+        <tr>
+            <th><label for="sch_news_content">Nội Dung Đầy Đủ</label></th>
+            <td><textarea id="sch_news_content" name="sch_news_content" rows="8" class="large-text"><?php echo esc_textarea($content); ?></textarea></td>
+        </tr>
+    </table>
+    <p class="description" style="padding:0 10px 10px;">💡 Ảnh đại diện bài viết: Thiết lập tại <strong>Ảnh Đại Diện</strong> (Featured Image) ở cột phải.</p>
+    <?php
+}
+
+function sch_save_news_meta($post_id) {
+    if (!isset($_POST['sch_news_meta_nonce']) || !wp_verify_nonce($_POST['sch_news_meta_nonce'], 'sch_save_news_meta')) return;
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (!current_user_can('edit_post', $post_id)) return;
+
+    if (isset($_POST['sch_news_author']))  update_post_meta($post_id, '_sch_news_author',  sanitize_text_field($_POST['sch_news_author']));
+    if (isset($_POST['sch_news_summary'])) update_post_meta($post_id, '_sch_news_summary', sanitize_textarea_field($_POST['sch_news_summary']));
+    if (isset($_POST['sch_news_content'])) update_post_meta($post_id, '_sch_news_content', sanitize_textarea_field($_POST['sch_news_content']));
+}
+add_action('save_post_sch_news', 'sch_save_news_meta');
+
+// Custom Columns for News in WP Admin
+function sch_set_news_columns($columns) {
+    return array(
+        'cb'       => '<input type="checkbox" />',
+        'title'    => 'Tiêu Đề',
+        'thumb'    => 'Ảnh',
+        'author'   => 'Tác Giả',
+        'taxonomy-sch_news_cat' => 'Danh Mục',
+        'date'     => 'Ngày Đăng',
+    );
+}
+add_filter('manage_sch_news_posts_columns', 'sch_set_news_columns');
+
+function sch_custom_news_column($column, $post_id) {
+    if ($column === 'thumb') {
+        $thumb = get_the_post_thumbnail($post_id, array(60, 40));
+        echo $thumb ? $thumb : '—';
+    }
+    if ($column === 'author') {
+        echo esc_html(get_post_meta($post_id, '_sch_news_author', true) ?: '—');
+    }
+}
+add_action('manage_sch_news_posts_custom_column', 'sch_custom_news_column', 10, 2);

@@ -10,5 +10,9 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
+# WordPress runtime (do not commit)
+wp-content/database/.ht.sqlite
+wp-content/uploads/
+
 # Keep docs folder for GitHub Pages
 !docs/

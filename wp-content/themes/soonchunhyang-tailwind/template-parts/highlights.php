@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Part: Highlights Section (3 Pillars of SCH Advantage)
+ * Dữ liệu quản lý qua: wp-admin → Cài Đặt SCH → Ưu Thế Nổi Bật
  *
  * @package Soonchunhyang
  */
@@ -9,28 +10,30 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+$colors = array('from-blue-600 to-cyan-500', 'from-sch-700 to-indigo-600', 'from-amber-500 to-orange-500');
+
 $cards = array(
     array(
-        'icon'  => 'fa-solid fa-award',
-        'badge' => 'VISA ƯU TIÊN TOP ĐẦU',
-        'title' => '90% Sinh Viên Đỗ Visa',
-        'desc'  => 'Đại học Soonchunhyang là một trong những trường đại học có tỷ lệ xét duyệt Visa cao nhất tại Hàn Quốc. Sinh viên hệ D2-2 được hưởng chính sách miễn phỏng vấn tại Đại sứ quán.',
-        'color' => 'from-blue-600 to-cyan-500'
+        'icon'  => sch_get_option('hl1_icon',  'fa-solid fa-award'),
+        'badge' => sch_get_option('hl1_badge', 'VISA ƯU TIÊN TOP ĐẦU'),
+        'title' => sch_get_option('hl1_title', '90% Sinh Viên Đỗ Visa'),
+        'desc'  => sch_get_option('hl1_desc',  'Đại học Soonchunhyang là một trong những trường đại học có tỷ lệ xét duyệt Visa cao nhất tại Hàn Quốc. Sinh viên hệ D2-2 được hưởng chính sách miễn phỏng vấn tại Đại sứ quán.'),
+        'color' => $colors[0],
     ),
     array(
-        'icon'  => 'fa-solid fa-building-columns',
-        'badge' => 'CƠ SỞ VẬT CHẤT 5 SAO',
-        'title' => '4 Ký Túc Xá Lớn Hiện Đại',
-        'desc'  => 'Trường sở hữu 4 khu ký túc xá khang trang, sạch sẽ với sức chứa hơn 4.000 sinh viên. Trang bị đầy đủ phòng gym, phòng tự học 24/7, căng-tin đa dạng và an ninh tuyệt đối.',
-        'color' => 'from-sch-700 to-indigo-600'
+        'icon'  => sch_get_option('hl2_icon',  'fa-solid fa-building-columns'),
+        'badge' => sch_get_option('hl2_badge', 'CƠ SỞ VẬT CHẤT 5 SAO'),
+        'title' => sch_get_option('hl2_title', '4 Ký Túc Xá Lớn Hiện Đại'),
+        'desc'  => sch_get_option('hl2_desc',  'Trường sở hữu 4 khu ký túc xá khang trang, sạch sẽ với sức chứa hơn 4.000 sinh viên. Trang bị đầy đủ phòng gym, phòng tự học 24/7, căng-tin đa dạng và an ninh tuyệt đối.'),
+        'color' => $colors[1],
     ),
     array(
-        'icon'  => 'fa-solid fa-users',
-        'badge' => 'HỖ TRỢ TOÀN DIỆN',
-        'title' => 'Kết Nối Du Học Sinh Quốc Tế',
-        'desc'  => 'Cầu nối giúp sinh viên quốc tế giao lưu, làm quen với văn hóa Hàn Quốc và nhận được sự hỗ trợ tận tình từ nhà trường về học tập, đời sống và định hướng việc làm sau tốt nghiệp.',
-        'color' => 'from-amber-500 to-orange-500'
-    )
+        'icon'  => sch_get_option('hl3_icon',  'fa-solid fa-users'),
+        'badge' => sch_get_option('hl3_badge', 'HỖ TRỢ TOÀN DIỆN'),
+        'title' => sch_get_option('hl3_title', 'Kết Nối Du Học Sinh Quốc Tế'),
+        'desc'  => sch_get_option('hl3_desc',  'Cầu nối giúp sinh viên quốc tế giao lưu, làm quen với văn hóa Hàn Quốc và nhận được sự hỗ trợ tận tình từ nhà trường về học tập, đời sống và định hướng việc làm sau tốt nghiệp.'),
+        'color' => $colors[2],
+    ),
 );
 ?>
 
